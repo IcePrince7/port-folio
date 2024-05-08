@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
-}
+ body {
+   background-image: linear-gradient(rgba(0, 0, 0, .690), rgba(0, 0, 0, 0.8)), url("/public/bg.jpg");
+ }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+ .TwoHalves {
+   margin-top: 50px;
+ }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+ .NavBar {
+   width: 300px;
+   float: left;
+   border-right: .20rem solid brown;
+   text-decoration: none;
+ }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+ .NavBar ul {
+   list-style-type: none;
+   margin: 2%;
+   padding: 0rem;
+   border: 1px solid purple;
+   border-bottom: none;
+ }
 
-.App-link {
-  color: #61dafb;
-}
+ .NavBar ul li {
+   list-style-type: none;
+   padding: 0.9rem;
+   border-bottom: .20px solid brown;
+ }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+ .NavBar li :hover {
+   color: black;
+   background-color: cadetblue;
+
+ }
+
+
+ .NavBar ul li a {
+   font-size: 200%;
+   text-decoration: none;
+   display: inline;
+   color: white;
+   padding: inherit;
+
+ }
+
+ .NavBar ul li a:hover {
+   font-size: 230%;
+ }
+ .NavBar ul li a.active {
+   font-size: 230%;
+   background-color: red;
+ }
+
+ .gridCont {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+   align-items: center;
+   border: 1px solid black;
+   gap: 10px,
+ }
+
+ .ComponentArena {
+   border: 1px solid green;
+   margin: 0px 40px 10px 300px;
+    
+   width: 1090px;
+   height:inherit;
+   padding-left: 20px;
+   font-size: small;
+   backdrop-filter: blur(40px);
+   
+  
+ }
+
+ .ComponentArena p {
+   padding: 15px 0px;
+   color: aquamarine
+ }
+ h2{
+  color: orange;
+ }

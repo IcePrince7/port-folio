@@ -1,0 +1,11 @@
+.Myprof{
+    border: 2px solid #338bc3;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    
+}
+.profile{
+    display: flex;
+    justify-content: center;
+}

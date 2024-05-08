@@ -1,0 +1,21 @@
+/* .container{
+    padding: 10px;
+    margin: 10px;
+    border: 10px #338bc3;
+    border-style: solid;
+    cursor: pointer;
+ } */
+p{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 2rem;
+    color:lightcoral ;
+}
+h1{
+    color: orange;
+    display: flex;
+    justify-content: center;
+    font-family: cursive;
+}
