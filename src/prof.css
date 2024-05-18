@@ -1,11 +1,30 @@
-.Myprof{
-    border: 2px solid #338bc3;
-    width: 150px;
-    height: 150px;
-    border-radius: 100px;
-    
-}
-.profile{
+.Myprof {
+  border: 2px solid #338bc3;
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.7s ease-out;}
+
+.profile {
     display: flex;
     justify-content: center;
+ 
+}
+.after.enprof{
+    background-color: aqua;
+    box-shadow: #338354;
+}
+
+.Myprof.enlarged {
+  width: 370px;
+  height: 370px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  position: fixed;
+  top: 34%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  transition: width 0.5s ease-out; 
 }
