@@ -1,130 +1,293 @@
- body {
-   background-image: linear-gradient(rgba(0, 0, 0, .690), rgba(0, 0, 0, 0.5)), url("/public/bg.jpg");
- }
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, .690), rgba(0, 0, 0, 0.5)), url("/public/bg.jpg");
+}
 
- .mainClass {
-   position: fixed;
-   backdrop-filter: blur(90px);
- }
+.mainClass {
+  position: fixed;
+  backdrop-filter: blur(90px);
+}
 
- .NameContainer {
-   transition: all;
-   animation: forwards;
-   display: flex;
-   justify-content: center;
-  }
-  .NameContainer h1{
-  font-weight: bold;
-  color: #009acc;
-  border-right: 2px solid #007acc;
-  animation: blink 0.7s step-end infinite;
-  font-weight: bold;
+.NameContainer {
+  transition: all;
+  animation: forwards;
+  display: flex;
+  justify-content: center;
+ }
+ .NameContainer h1{
+ font-weight: bold;
+ color: #009acc;
+ border-right: 2px solid #007acc;
+ animation: blink 0.7s step-end infinite;
+ font-weight: bold;
 }
 
 @keyframes blink {
-  from, to { border-color: transparent; }
-  50% { border-color: #007acc; }
+ from, to { border-color: transparent; }
+ 50% { border-color: #007acc; }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+ from { opacity: 0; }
+ to { opacity: 1; }
 }
- .page {
-   filter: blur(7px);
-   pointer-events: none;
-   cursor: not-allowed;
- }
+.page {
+  filter: blur(7px);
+  pointer-events: none;
+  cursor: not-allowed;
+}
 
- .TwoHalves {
-   margin-top: 50px;
- }
+.TwoHalves {
+  margin-top: 50px;
+}
 
- .NavBar {
-   width: 300px;
-   float: left;
-   border-right: .20rem solid brown;
-   text-decoration: none;
- }
-
- .NavBar ul {
-   list-style-type: none;
-   margin: 2%;
-   padding: 0rem;
-   border: 1px solid purple;
-   border-bottom: none;
- }
-
- .NavBar ul li {
-   list-style-type: none;
-   padding: 0.9rem;
-   border-bottom: .20px solid brown;
- }
-
- .NavBar li :hover {
-   color: black;
-   background-color: cadetblue;
- }
-
-
- .NavBar ul li a {
-   font-size: 200%;
-   text-decoration: none;
-   display: inline;
-   color: white;
-   padding: inherit;
- }
-
- .NavBar ul li a:hover {
-   font-size: 230%;
- }
-
- .NavBar ul li a.active {
-   font-size: 230%;
-   background-color: red;
- }
-
- .gridCont {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    border: 1px solid black;
-   gap: 10px;
-   text-align: center;
- }
-
- .gridCont a{
+.NavBar {
+  width: 300px;
+  float: left;
+  border-right: .20rem solid brown;
   text-decoration: none;
-  color: inherit;
- }
- .ComponentArena {
-   border: 1px solid green;
-   margin: 0px 40px 10px 300px;
+}
 
-   width: 1090px;
-   height: inherit;
-   padding-left: 20px;
-   font-size: small;
-   backdrop-filter: blur(40px);
- }
+.NavBar ul {
+  list-style-type: none;
+  margin: 2%;
+  padding: 0rem;
+  border: 1px solid purple;
+  border-bottom: none;
+}
 
- .ComponentArena p {
-   padding: 15px 0px;
-   color: aquamarine
- }
+.NavBar ul li {
+  list-style-type: none;
+  padding: 0.9rem;
+  border-bottom: .20px solid brown;
+}
 
- h2 {
-   color: orange;
- }
+.NavBar li :hover {
+  color: black;
+  background-color: cadetblue;
+}
 
- .overlay {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background-color: rgba(0, 0, 0, 0.5);
-   z-index: 999;
-   display: none;
-   transition: all 0.5s ease-in-out;
+
+.NavBar ul li a {
+  font-size: 200%;
+  text-decoration: none;
+  display: inline;
+  color: white;
+  padding: inherit;
+}
+
+.NavBar ul li a:hover {
+  font-size: 230%;
+}
+
+.NavBar ul li a.active {
+  font-size: 230%;
+  background-color: red;
+}
+
+.gridCont {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+   border: 1px solid black;
+  gap: 10px;
+  text-align: center;
+}
+
+.gridCont a{
+ text-decoration: none;
+ color: inherit;
+}
+.ComponentArena {
+  border: 1px solid green;
+  margin: 0px 40px 10px 300px;
+
+  width: 1090px;
+  height: inherit;
+  padding-left: 20px;
+  font-size: small;
+  backdrop-filter: blur(40px);
+}
+
+.ComponentArena p {
+  padding: 15px 0px;
+  color: aquamarine
+}
+
+h2 {
+  color: orange;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+  transition: all 0.5s ease-in-out;
+
+}
+
+  @media (max-width: 1000px) {
+    body {
+      background-image: linear-gradient(rgba(0, 0, 0, .690), rgba(0, 0, 0, 0.5)), url("/public/bg.jpg");
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .mainClass {
+      position: fixed;
+      backdrop-filter: blur(90px);
+      width: 100%;
+      height: 100%;
+    }
+
+    .NameContainer {
+      transition: all 0.5s;
+      animation: fadeIn 1s forwards;
+      display: flex;
+      font-size: 1%;
+      justify-content: center;
  
- }
+    }
+
+    .NameContainer h1 {
+      /* font-weight: bold; */
+      color: #009acc;
+      border-right: 2px solid #007acc;
+      animation: blink 0.7s step-end infinite;
+  
+    }
+
+    @keyframes blink {
+
+      from,
+      to {
+        border-color: transparent;
+      }
+
+      50% {
+        border-color: #007acc;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .page {
+      filter: blur(7px);
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+
+    .TwoHalves {
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .NavBar {
+      width: 300px;
+      float: left;
+      border-right: 0.2rem solid brown;
+    }
+
+    .NavBar ul {
+      list-style-type: none;
+      margin: 2%;
+      width: 90%;
+      float: left;
+      padding: 1%;
+      border: 2px solid purple;
+      border-bottom: 0%;
+    }
+
+    .NavBar ul li {
+      list-style-type: none;
+      padding: 0.9rem;
+      border-bottom: 0.2px solid brown;
+    }
+
+    .NavBar li:hover {
+      color: black;
+    }
+
+    .NavBar ul li a {
+      font-size: 200%;
+      text-decoration: none;
+      display: inline;
+      color: white;
+      padding: inherit;
+    }
+
+    .NavBar ul li a:hover {
+      font-size: 230%;
+    }
+
+    .NavBar ul li a.active {
+      font-size: 230%;
+      background-color: red;
+    }
+
+    .gridCont {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      border: 1px solid black;
+      gap: 10px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .gridCont a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .ComponentArena {
+      border: 1px solid green;
+      margin: 0 40px 10px 300px;
+      width: calc(100% - 340px);
+      padding-left: 20px;
+      font-size: small;
+      backdrop-filter: blur(40px);
+      float: right;
+    }
+
+    .ComponentArena p {
+      padding: 15px 0;
+      color: aquamarine;
+    }
+
+    h2 {
+      color: orange;
+    }
+
+    .NameContainer h1 {
+      font-size: 1.5rem;
+    }
+
+    .NavBar {
+      width: 100%;
+      border-right: none;
+      border-bottom: 0.2rem solid brown;
+    }
+
+    .ComponentArena {
+      margin: 0;
+      width: 100%;
+      padding: 10px;
+    }
+
+    .gridCont {
+      grid-template-columns: 1fr;
+    }
+  }
