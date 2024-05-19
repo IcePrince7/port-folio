@@ -4,9 +4,34 @@
 
  .mainClass {
    position: fixed;
-    backdrop-filter: blur(90px);
+   backdrop-filter: blur(90px);
  }
- .page{
+
+ .NameContainer {
+   transition: all;
+   animation: forwards;
+   display: flex;
+   justify-content: center;
+  }
+  .NameContainer h1{
+  border-right:3.5px solid green ;
+  font-weight: bold;
+  color: #007acc;
+  border-right: 2px solid #007acc;
+  animation: blink 0.7s step-end infinite;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: #007acc; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+ .page {
    filter: blur(7px);
    pointer-events: none;
    cursor: not-allowed;
@@ -87,14 +112,16 @@
  h2 {
    color: orange;
  }
+
  .overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  display: none;
-  transition: all 0.5s ease-in-out; /* Add transition */
-}
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   z-index: 999;
+   display: none;
+   transition: all 0.5s ease-in-out;
+ 
+ }

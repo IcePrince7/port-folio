@@ -1,0 +1,20 @@
+.whoAmIContainer {
+    padding: 20px;
+  }
+  
+  .keywordsList {
+    list-style-type: none;
+    padding: 10;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .keywordItem {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: .999rem;
+  }
+   

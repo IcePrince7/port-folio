@@ -26,7 +26,7 @@ function Project() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % arr.length);
-    }, 10000);  
+    }, 10000);
     setIntervalId(interval);
 
     return () => clearInterval(interval);
@@ -51,7 +51,9 @@ function Project() {
               display: index === currentIndex ? "block" : "none",
             }}
           >
-            <h2>{item.project_name}</h2>
+            <div style={{ textAlign: "center" }}>
+              <h2>{item.project_name}</h2>
+            </div>
             <p>
               {item.usecase.map((subItem, subIndex) => (
                 <li key={subIndex}>{subItem}</li>
@@ -60,7 +62,7 @@ function Project() {
           </div>
         ))}
       </ul>
-      <div style={{ textAlign: "center" ,marginBottom:"30px"}} >
+      <div style={{ textAlign: "center", marginBottom: "30px" }}>
         {arr.map((data, index) => (
           <span
             key={index}
@@ -72,7 +74,6 @@ function Project() {
               display: "inline-block",
               margin: "0 5px",
               cursor: "pointer",
- 
             }}
             onClick={() => handleDotClick(index)}
           />

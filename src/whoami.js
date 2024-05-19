@@ -1,14 +1,33 @@
-import { Route } from "react-router-dom";
+import React from "react";
+import "./whoami.css"
 
-function Whoami() {
-    
-    return(
-        <p>Dedicated Software Engineer with a thorough grasp of the full software lifecycle, motivated by a desire to establish 
-        a dynamic and influential career in technology. With a strong skill set and a self-motivated mentality, I am actively 
-        looking for chances with a forward-thinking organization. My objective is to contribute to mutual progress while 
-        bringing my excitement and knowledge, supported by 2.2 years of relevant experience, to the ever-changing digital 
-        industry.</p>
-      )
+function WhoAmI() {
+  const keywords = [
+    "Dedicated Software Engineer",
+    "Thorough grasp of the full software lifecycle",
+    "Motivated",
+    "Dynamic and influential career",
+    "Strong skill set",
+    "Self-motivated",
+    "Forward-thinking organization",
+    "Mutual progress",
+    "Enthusiasm and knowledge",
+    "2.2 years of experience",
+    "Ever-changing digital industry",
+  ];
+
+  return (
+    <div className="whoAmIContainer">
+      <div style={{textAlign:"center" }}><h1>Who Am I</h1></div>
+      <ul className="keywordsList">
+        {keywords.map((keyword, index) => (
+          <li key={index} className="keywordItem">
+            {keyword}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
-export default Whoami;
+export default WhoAmI;
