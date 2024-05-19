@@ -1,6 +1,9 @@
 .whoAmIContainer {
     padding: 20px;
   }
+.whoAmIContainer li {
+    cursor: default;
+  }
   
   .keywordsList {
     list-style-type: none;

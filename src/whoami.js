@@ -5,14 +5,14 @@ function WhoAmI() {
   const keywords = [
     "Dedicated Software Engineer",
     "Thorough grasp of the full software lifecycle",
-    "Motivated",
+    "Motivated ",
     "Dynamic and influential career",
     "Strong skill set",
     "Self-motivated",
-    "Forward-thinking organization",
+    "Looking forward-thinking organization",
     "Mutual progress",
     "Enthusiasm and knowledge",
-    "2.2 years of experience",
+    "2+ years of experience",
     "Ever-changing digital industry",
   ];
 

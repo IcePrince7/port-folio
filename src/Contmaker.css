@@ -5,9 +5,10 @@
      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
      margin: 2rem;
      color: lightcoral;
+     cursor: default;
  }
 
- h1 {
+ h1 {   
      color: orange;
      display: inline-block;
      justify-content: center;

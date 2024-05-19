@@ -4,7 +4,7 @@ import Profile from "./prof";
 import Cont_maker from "./Contmaker";
 import { Link, BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faMapMarkerAlt, faMobile } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import WhoAmI from "./whoami";
 import Languages from "./MyExpertise";
@@ -55,25 +55,25 @@ function App() {
           <div className="gridCont">
             <Cont_maker
               toCreate={
-                <>
+                <a href="mailto:Sekarsakthi73@gmail.com">
                   <FontAwesomeIcon icon={faEnvelope} /> Sekarsakthi73@gmail.com
-                </>
+                </a>
               }
               tag="p"
             ></Cont_maker>
             <Cont_maker
               toCreate={
-                <>
+                <a href="https://www.linkedin.com/in/Sakthi73/" target="blank">
                   <FontAwesomeIcon icon={faLinkedin} /> linkedin/Sakthi73
-                </>
+                </a>
               }
               tag="p"
             ></Cont_maker>
             <Cont_maker
               toCreate={
-                <>
-                  <FontAwesomeIcon icon={faMapMarkerAlt} /> 1/8, Vennanthur, Minnakal (po), Namakkal (DT), Tamil Nadu
-                </>
+                <a href="https://wa.me/9080760890" target="blank">
+                  <FontAwesomeIcon icon={faMobile} /> 9080760890
+                </a>
               }
               tag="p"
             ></Cont_maker>

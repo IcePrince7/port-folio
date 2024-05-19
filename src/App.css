@@ -1,5 +1,5 @@
  body {
-   background-image: linear-gradient(rgba(0, 0, 0, .690), rgba(0, 0, 0, 0.8)), url("/public/bg.jpg");
+   background-image: linear-gradient(rgba(0, 0, 0, .690), rgba(0, 0, 0, 0.5)), url("/public/bg.jpg");
  }
 
  .mainClass {
@@ -14,9 +14,8 @@
    justify-content: center;
   }
   .NameContainer h1{
-  border-right:3.5px solid green ;
   font-weight: bold;
-  color: #007acc;
+  color: #009acc;
   border-right: 2px solid #007acc;
   animation: blink 0.7s step-end infinite;
   font-weight: bold;
@@ -88,11 +87,15 @@
  .gridCont {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-   align-items: center;
-   border: 1px solid black;
-   gap: 10px,
+    border: 1px solid black;
+   gap: 10px;
+   text-align: center;
  }
 
+ .gridCont a{
+  text-decoration: none;
+  color: inherit;
+ }
  .ComponentArena {
    border: 1px solid green;
    margin: 0px 40px 10px 300px;

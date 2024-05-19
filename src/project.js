@@ -9,6 +9,7 @@ function Project() {
         `Created and maintained a web page for individuals to write, store, and retrieve notes or links securely.`,
         `Implemented user authentication and authorization mechanisms to ensure data privacy`,
       ],
+      link:[`https://github.com/IcePrince7/enotes`]
     },
     {
       project_name: "IBook - Library Management Tool",
@@ -17,6 +18,7 @@ function Project() {
         `Designed and developed a web page for students to access library books, including Admin functionality.`,
         `Implemented services to enhance functionality and ensure seamless user experience.`,
       ],
+      link:[`https://github.com/IcePrince7/IBook-An-Online-Library-Management-Tool/`]
     },
   ];
 
@@ -52,7 +54,7 @@ function Project() {
             }}
           >
             <div style={{ textAlign: "center" }}>
-              <h2>{item.project_name}</h2>
+              <a href={item.link} target="blank" style={{textDecoration:"none",color:"inherit"}}><h2>{item.project_name}</h2></a>
             </div>
             <p>
               {item.usecase.map((subItem, subIndex) => (
