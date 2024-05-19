@@ -98,7 +98,7 @@ function App() {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/" activeClassName="active">
+                    <Link to="/port-folio" activeClassName="active">
                       About
                     </Link>
                   </li>
@@ -110,7 +110,7 @@ function App() {
                 <Route path="/whoami" element={<WhoAmI />} />
                 <Route path="/languages" element={<Languages />} />
                 <Route path="/proj" element={<Project />} />
-                <Route path="/" element={<Aboutpage />} />
+                <Route path="/port-folio" element={<Aboutpage />} />
               </Routes>
             </div>
           </div>
