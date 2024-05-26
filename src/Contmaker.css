@@ -1,17 +1,39 @@
- p {
-     display: inline-block;
-     font-weight: bold;
-     font-size: 20px;
-     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-     margin: 2rem;
-     color: lightcoral;
-     cursor: default;
- }
+@media (min-width: 1000px) {
+    p {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 2rem;
+        color: lightcoral;
+        cursor: default;
+    }
 
- h1 {   
-     color: orange;
-     display: inline-block;
-     justify-content: center;
-     font-family: cursive;
-     
- }
+    h1 {
+        color: orange;
+        display: inline-block;
+        justify-content: center;
+        font-family: cursive;
+
+    }
+}
+
+@media (max-width: 1000px) {
+    p {
+        font-weight: bold;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin: 2rem;
+        color: lightcoral;
+        cursor: default;
+        font-size: 18px;
+
+    }
+
+    h1 {
+        color: brown;
+        display: inline-block;
+        justify-content: center;
+        font-family: cursive;
+
+    }
+}

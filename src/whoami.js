@@ -4,21 +4,21 @@ import "./whoami.css"
 function WhoAmI() {
   const keywords = [
     "Dedicated Software Engineer",
-    "Thorough grasp of the full software lifecycle",
     "Motivated ",
     "Dynamic and influential career",
     "Strong skill set",
     "Self-motivated",
     "Looking forward-thinking organization",
-    "Mutual progress",
-    "Enthusiasm and knowledge",
+        "Enthusiasm and knowledge",
     "2+ years of experience",
-    "Ever-changing digital industry",
+    "Thorough grasp of the full software lifecycle",
+
+ 
   ];
 
   return (
     <div className="whoAmIContainer">
-      <div style={{textAlign:"center" }}><h1>Who Am I</h1></div>
+      <div style={{textAlign:"center" }}><h1>Myself</h1></div>
       <ul className="keywordsList">
         {keywords.map((keyword, index) => (
           <li key={index} className="keywordItem">

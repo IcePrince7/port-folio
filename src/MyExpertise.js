@@ -8,7 +8,7 @@ const skillsData = [
   },
   {
     title: "Backend",
-    skills: ["Java", "SpringBoot", "Hibernate"]
+    skills: ["Java", "SpringBoot", "Python", "Node.js"]
   },
   {
     title: "Database",

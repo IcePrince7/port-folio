@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import "./project.css"
 function Project() {
   const arr = [
     {
@@ -53,10 +53,10 @@ function Project() {
               display: index === currentIndex ? "block" : "none",
             }}
           >
-            <div style={{ textAlign: "center" }}>
-              <a href={item.link} target="blank" style={{textDecoration:"none",color:"inherit"}}><h2>{item.project_name}</h2></a>
+            <div className="Title"  >
+              <a href={item.link} target="blank" ><h2>{item.project_name}</h2></a>
             </div>
-            <p>
+            <p className="usecase">
               {item.usecase.map((subItem, subIndex) => (
                 <li key={subIndex}>{subItem}</li>
               ))}

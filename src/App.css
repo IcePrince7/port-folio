@@ -1,293 +1,311 @@
-body {
-  background-image: linear-gradient(rgba(0, 0, 0, .690), rgba(0, 0, 0, 0.5)), url("/public/bg.jpg");
-}
+@media (min-width: 1000px) {
+  body {
+    background-image: linear-gradient(rgba(0, 0, 0, .690), rgba(0, 0, 0, 0.5)), url("/public/bg.jpg");
+  }
 
-.mainClass {
-  position: fixed;
-  backdrop-filter: blur(90px);
-}
+  .mainClass {
+    position: fixed;
+    backdrop-filter: blur(90px);
+  }
 
-.NameContainer {
-  transition: all;
-  animation: forwards;
-  display: flex;
-  justify-content: center;
- }
- .NameContainer h1{
- font-weight: bold;
- color: #009acc;
- border-right: 2px solid #007acc;
- animation: blink 0.7s step-end infinite;
- font-weight: bold;
-}
+  .NameContainer {
+    transition: all;
+    animation: forwards;
+    display: flex;
+    justify-content: center;
+  }
 
-@keyframes blink {
- from, to { border-color: transparent; }
- 50% { border-color: #007acc; }
-}
+  .NameContainer h1 {
+    font-weight: bold;
+    color: #009acc;
+    border-right: 2px solid #007acc;
+    animation: blink 0.7s step-end infinite;
+    font-weight: bold;
+  }
 
-@keyframes fadeIn {
- from { opacity: 0; }
- to { opacity: 1; }
-}
-.page {
-  filter: blur(7px);
-  pointer-events: none;
-  cursor: not-allowed;
-}
+  @keyframes blink {
 
-.TwoHalves {
-  margin-top: 50px;
-}
-
-.NavBar {
-  width: 300px;
-  float: left;
-  border-right: .20rem solid brown;
-  text-decoration: none;
-}
-
-.NavBar ul {
-  list-style-type: none;
-  margin: 2%;
-  padding: 0rem;
-  border: 1px solid purple;
-  border-bottom: none;
-}
-
-.NavBar ul li {
-  list-style-type: none;
-  padding: 0.9rem;
-  border-bottom: .20px solid brown;
-}
-
-.NavBar li :hover {
-  color: black;
-  background-color: cadetblue;
-}
-
-
-.NavBar ul li a {
-  font-size: 200%;
-  text-decoration: none;
-  display: inline;
-  color: white;
-  padding: inherit;
-}
-
-.NavBar ul li a:hover {
-  font-size: 230%;
-}
-
-.NavBar ul li a.active {
-  font-size: 230%;
-  background-color: red;
-}
-
-.gridCont {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-   border: 1px solid black;
-  gap: 10px;
-  text-align: center;
-}
-
-.gridCont a{
- text-decoration: none;
- color: inherit;
-}
-.ComponentArena {
-  border: 1px solid green;
-  margin: 0px 40px 10px 300px;
-
-  width: 1090px;
-  height: inherit;
-  padding-left: 20px;
-  font-size: small;
-  backdrop-filter: blur(40px);
-}
-
-.ComponentArena p {
-  padding: 15px 0px;
-  color: aquamarine
-}
-
-h2 {
-  color: orange;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  display: none;
-  transition: all 0.5s ease-in-out;
-
-}
-
-  @media (max-width: 1000px) {
-    body {
-      background-image: linear-gradient(rgba(0, 0, 0, .690), rgba(0, 0, 0, 0.5)), url("/public/bg.jpg");
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    from,
+    to {
+      border-color: transparent;
     }
 
-    .mainClass {
-      position: fixed;
-      backdrop-filter: blur(90px);
-      width: 100%;
-      height: 100%;
-    }
-
-    .NameContainer {
-      transition: all 0.5s;
-      animation: fadeIn 1s forwards;
-      display: flex;
-      font-size: 1%;
-      justify-content: center;
- 
-    }
-
-    .NameContainer h1 {
-      /* font-weight: bold; */
-      color: #009acc;
-      border-right: 2px solid #007acc;
-      animation: blink 0.7s step-end infinite;
-  
-    }
-
-    @keyframes blink {
-
-      from,
-      to {
-        border-color: transparent;
-      }
-
-      50% {
-        border-color: #007acc;
-      }
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    .page {
-      filter: blur(7px);
-      pointer-events: none;
-      cursor: not-allowed;
-    }
-
-    .TwoHalves {
-      margin-top: 50px;
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .NavBar {
-      width: 300px;
-      float: left;
-      border-right: 0.2rem solid brown;
-    }
-
-    .NavBar ul {
-      list-style-type: none;
-      margin: 2%;
-      width: 90%;
-      float: left;
-      padding: 1%;
-      border: 2px solid purple;
-      border-bottom: 0%;
-    }
-
-    .NavBar ul li {
-      list-style-type: none;
-      padding: 0.9rem;
-      border-bottom: 0.2px solid brown;
-    }
-
-    .NavBar li:hover {
-      color: black;
-    }
-
-    .NavBar ul li a {
-      font-size: 200%;
-      text-decoration: none;
-      display: inline;
-      color: white;
-      padding: inherit;
-    }
-
-    .NavBar ul li a:hover {
-      font-size: 230%;
-    }
-
-    .NavBar ul li a.active {
-      font-size: 230%;
-      background-color: red;
-    }
-
-    .gridCont {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      border: 1px solid black;
-      gap: 10px;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .gridCont a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .ComponentArena {
-      border: 1px solid green;
-      margin: 0 40px 10px 300px;
-      width: calc(100% - 340px);
-      padding-left: 20px;
-      font-size: small;
-      backdrop-filter: blur(40px);
-      float: right;
-    }
-
-    .ComponentArena p {
-      padding: 15px 0;
-      color: aquamarine;
-    }
-
-    h2 {
-      color: orange;
-    }
-
-    .NameContainer h1 {
-      font-size: 1.5rem;
-    }
-
-    .NavBar {
-      width: 100%;
-      border-right: none;
-      border-bottom: 0.2rem solid brown;
-    }
-
-    .ComponentArena {
-      margin: 0;
-      width: 100%;
-      padding: 10px;
-    }
-
-    .gridCont {
-      grid-template-columns: 1fr;
+    50% {
+      border-color: #007acc;
     }
   }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .page {
+    filter: blur(7px);
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+
+  .TwoHalves {
+    margin-top: 50px;
+  }
+
+  .NavBar {
+    width: 300px;
+    float: left;
+    border-right: .20rem solid brown;
+    text-decoration: none;
+  }
+
+  .NavBar ul {
+    list-style-type: none;
+    margin: 2%;
+    padding: 0rem;
+    border: 1px solid purple;
+    border-bottom: none;
+  }
+
+  .NavBar ul li {
+    list-style-type: none;
+    padding: 0.9rem;
+    border-bottom: .20px solid brown;
+  }
+
+  .NavBar li :hover {
+    color: black;
+    background-color: cadetblue;
+  }
+
+
+  .NavBar ul li a {
+    font-size: 200%;
+    text-decoration: none;
+    display: inline;
+    color: white;
+    padding: inherit;
+  }
+
+  .NavBar ul li a:hover {
+    font-size: 230%;
+  }
+
+  .NavBar ul li a.active {
+    font-size: 230%;
+    background-color: red;
+  }
+
+  .gridCont {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    border: 1px solid black;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .gridCont a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .ComponentArena {
+    border: 1px solid green;
+    margin: 0px 40px 10px 300px;
+
+    width: 1090px;
+    height: inherit;
+    padding-left: 20px;
+    font-size: small;
+    backdrop-filter: blur(40px);
+  }
+
+  .ComponentArena p {
+    padding: 15px 0px;
+    color: aquamarine
+  }
+
+  h2 {
+    color: orange;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+    transition: all 0.5s ease-in-out;
+
+  }
+}
+
+@media (max-width: 1000px) {
+  body {
+    /* background-image: linear-gradient(rgba(0, 0, 0, .690), rgba(0, 0, 0, 0.5)), url("/public/bg.jpg"); */
+    border: 3px solid wheat;
+    margin: 0 13%;
+    border-radius: 10px;
+
+
+  }
+
+  .mainClass {
+    position: fixed;
+    backdrop-filter: blur(90px);
+    width: 100%;
+    height: 100%;
+    filter: blur(1px);
+  }
+
+  .NameContainer {
+    transition: all 0.5s;
+    animation: fadeIn 1s forwards;
+    display: flex;
+    font-size: 1%;
+    justify-content: center;
+
+  }
+
+  .NameContainer h1 {
+    /* font-weight: bold; */
+    color: #009acc;
+    border-right: 2px solid lightcoral;
+    animation: blink 0.7s step-end infinite;
+
+  }
+
+  @keyframes blink {
+
+    from,
+    to {
+      border-color: transparent;
+    }
+
+    50% {
+      border-color: lightcoral;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .page {
+    filter: blur(7px);
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+
+  .TwoHalves {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .NavBar {
+    width: 300px;
+    float: left;
+    border-right: 0.2rem solid brown;
+  }
+
+  .NavBar ul {
+    font: bold 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    margin: 10px;
+    padding: 0;
+ 
+  }
+
+  .NavBar ul li {
+    display: inline-block;
+      }
+
+  .NavBar li:hover {
+    background: #314b60;
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .3);
+  }
+  .NavBar li:first-child a {
+    border-radius: 4px 0 0 4px;
+  }
+  .NavBar li:last-child a {
+    border-right: 0;
+    border-radius: 0px 4px 4px 0px;
+  }
+
+  .NavBar ul li a {
+    background: #395870;
+    background: linear-gradient(#49708f, #293f50);
+    border-right: 1px solid rgba(0, 0, 0, .3);
+    text-align: center;
+    color: #fff;
+    padding: 12px 20px;
+    text-decoration: none;
+  }
+
+  .NavBar ul li a:hover {
+    color: #009acc;
+  }
+ 
+  
+  .ComponentArena {
+    /* topw */
+     font-size: small;
+    backdrop-filter: blur(40px);
+    
+  }
+  
+  .ComponentArena p {
+    padding: 15px 0;
+    color: aquamarine;
+  }
+  
+  h2 {
+    color: orange;
+  }
+  
+  .NameContainer h1 {
+    font-size: 1.5rem;
+  }
+  
+  .NavBar {
+    width: 100%;
+    border-right: none;
+    
+  }
+  
+  .ComponentArena {
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .gridCont {
+    display: grid;
+    border: 1px solid #009acc;
+    gap: 10px;
+    text-align: center;
+    padding: 2px;
+    margin: 0 10%;
+    border-radius: 8%;
+    grid-template-columns: 1fr;
+  }
+  
+  .gridCont a {
+    text-decoration: none;
+    color: brown;
+  }
+ 
+}

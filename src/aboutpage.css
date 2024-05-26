@@ -35,3 +35,9 @@
     }
   }
   
+  .welcome-container p{
+    color: black  
+  }
+  .fadeClass {
+    color: #009acc;
+  }

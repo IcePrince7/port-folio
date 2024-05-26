@@ -84,12 +84,12 @@ function App() {
                 <ul>
                   <li>
                     <Link to="/whoami" activeClassName="active">
-                      Who am I
+                      My self
                     </Link>
                   </li>
                   <li>
                     <Link to="/languages" activeClassName="active">
-                      My expertise
+                      My Expertise
                     </Link>
                   </li>
                   <li>
