@@ -1,0 +1,9 @@
+.Title a{text-decoration: none;
+text-align: center;}
+
+
+@media (max-width: 1000px) {
+    .Title a{text-decoration: none;}
+    .Title h2{ color: brown;}
+    .usecase li{ color: black;}
+}
