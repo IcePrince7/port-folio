@@ -1,9 +1,17 @@
-.Title a{text-decoration: none;
-text-align: center;}
+.Title a {
+    text-decoration: none;
+    text-align: center;
+}
 
 
-@media (max-width: 1000px) {
-    .Title a{text-decoration: none;}
-    .Title h2{ color: brown;}
-    .usecase li{ color: black;}
+.Title a {
+    text-decoration: none;
+}
+
+.Title h2 {
+    color: white;
+}
+
+.usecase li {
+    color: #9c9da2;
 }

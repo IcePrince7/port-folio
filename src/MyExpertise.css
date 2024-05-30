@@ -1,69 +1,71 @@
 .expertiseContainer {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  padding: 20px;
+  text-align: center;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  display: block;
+  opacity: 1;
+}
+
+.slide h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.slide ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.slide ul li {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.prevButton,
+.nextButton {
+ 
+   background: inherit;
+  border: none;
+ color: aliceblue;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+ 
+}
+
+.prevButton {
+  margin-left: 20px;
+}
+
+.nextButton {
+  margin-right: 20px;
+}
+
+.prevButton:hover,
+.nextButton:hover {
   
-  .slide {
-    display: none;
-    padding: 20px;
-    text-align: center;
-    transition: opacity 1s ease-in-out;
-  }
-  
-  .slide.active {
-    display: block;
-    opacity: 1;
-  }
-  
-  .slide h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .slide ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .slide ul li {
-    font-size: 18px;
-    margin: 5px 0;
-  }
-   
-  @media (max-width: 1000px) {
-    .expertiseContainer {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-    }
-    
-    .slide {
-      display: none;
-      padding: 20px;
-      text-align: center;
-      transition: opacity 1s ease-in-out;
-    }
-    
-    .slide.active {
-      display: block;
-      opacity: 1;
-    }
-    
-    .slide h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-    
-    .slide ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    
-    .slide ul li {
-      font-size: 18px;
-      margin: 5px 0;
-    }
-    .slide p{color: black;}
-    
-  }
+  font-size: x-large;
+}

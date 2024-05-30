@@ -1,24 +1,27 @@
 import React, { useState, useEffect } from "react";
- import "./MyExpertise.css"
+import "./MyExpertise.css";
 
 const skillsData = [
   {
     title: "Frontend",
-    skills: ["JavaScript", "React","Angular", "CSS", "HTML"]
+    skills: ["JavaScript", "React", "Angular", "CSS", "HTML"],
   },
   {
     title: "Backend",
-    skills: ["Java", "SpringBoot", "Python", "Node.js"]
+    skills: ["Java", "SpringBoot", "Python", "Node.js"],
   },
   {
     title: "Database",
-    skills: ["MySQL", "MongoDB", "H2"]
+    skills: ["MySQL", "MongoDB", "H2"],
   },
   {
     title: "Testing",
-    skills: ["Selenium","Junit","Cucumber"]
-  }
-
+    skills: ["Selenium", "Junit", "Cucumber"],
+  },
+  {
+    title: "Tools",
+    skills: ["Git", "Jira", "Postman"],
+  },
 ];
 
 function MyExpertise() {
@@ -28,7 +31,7 @@ function MyExpertise() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % skillsData.length);
-    }, 5000);  
+    }, 5000);
     setIntervalId(interval);
 
     return () => clearInterval(interval);
@@ -39,7 +42,25 @@ function MyExpertise() {
     clearInterval(intervalId);
     const newInterval = setInterval(() => {
       setCurrentSlide((prevIndex) => (prevIndex + 1) % skillsData.length);
-    }, 5000);   
+    }, 5000);
+    setIntervalId(newInterval);
+  };
+
+  const handlePrevClick = () => {
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + skillsData.length) % skillsData.length);
+    clearInterval(intervalId);
+    const newInterval = setInterval(() => {
+      setCurrentSlide((prevIndex) => (prevIndex + 1) % skillsData.length);
+    }, 5000);
+    setIntervalId(newInterval);
+  };
+
+  const handleNextClick = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % skillsData.length);
+    clearInterval(intervalId);
+    const newInterval = setInterval(() => {
+      setCurrentSlide((prevIndex) => (prevIndex + 1) % skillsData.length);
+    }, 5000);
     setIntervalId(newInterval);
   };
 
@@ -60,6 +81,14 @@ function MyExpertise() {
             </ul>
           </div>
         ))}
+        <div className="buttonContainer">
+          <button className="prevButton" onClick={handlePrevClick}>
+          ❮
+          </button>
+          <button className="nextButton" onClick={handleNextClick}>
+          ❯
+          </button>
+        </div>
       </div>
       <div style={{ textAlign: "center", marginBottom: "30px" }}>
         {skillsData.map((_, index) => (

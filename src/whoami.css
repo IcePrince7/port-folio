@@ -2,6 +2,7 @@
     padding: 20px;
   }
 .whoAmIContainer li {
+  border-color: #854ce5;
     cursor: default;
   }
   
@@ -16,7 +17,9 @@
   .keywordItem {
     background-color: #f0f0f0;
     padding: 10px;
+    border: 1px solid #2d64d0;
     border-radius: 5px;
+    box-shadow: #2d64d0;
     font-weight: bold;
     font-size: .999rem;
   }

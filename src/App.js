@@ -64,7 +64,7 @@ function App() {
             <Cont_maker
               toCreate={
                 <a href="https://www.linkedin.com/in/Sakthi73/" target="blank">
-                  <FontAwesomeIcon icon={faLinkedin} /> linkedin/Sakthi73
+                  <FontAwesomeIcon icon={faLinkedin} /> LinkedIn/Sakthi73
                 </a>
               }
               tag="p"
