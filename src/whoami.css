@@ -1,26 +1,6 @@
-.whoAmIContainer {
-    padding: 20px;
-  }
-.whoAmIContainer li {
-  border-color: #854ce5;
-    cursor: default;
-  }
-  
-  .keywordsList {
-    list-style-type: none;
-    padding: 10;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .keywordItem {
-    background-color: #f0f0f0;
-    padding: 10px;
-    border: 1px solid #2d64d0;
-    border-radius: 5px;
-    box-shadow: #2d64d0;
-    font-weight: bold;
-    font-size: .999rem;
-  }
-   
+.intro{
+  color: #9c9da2;
+  margin-left: 16%;
+  margin-right: 16%;
+  align-items: center;
+}

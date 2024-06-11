@@ -1,15 +1,16 @@
-import "./App.css";
-import React, { useEffect, useState } from "react";
-import Profile from "./prof";
-import Cont_maker from "./Contmaker";
-import { Link, BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { faJava, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faCode, faContactBook, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faMapMarkerAlt, faMobile } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import WhoAmI from "./whoami";
+import React, { useEffect, useState } from "react";
+import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { CSSTransition } from 'react-transition-group';
+import "./App.css";
+import Cont_maker from "./Contmaker";
 import Languages from "./MyExpertise";
-import Project from "./project";
 import Aboutpage from "./aboutpage";
+import Profile from "./prof";
+import Project from "./project";
+import WhoAmI from "./whoami";
 
 const texts = ["akthivel G", "oftware Engineer"];
 
@@ -55,15 +56,15 @@ function App() {
           <div className="gridCont">
             <Cont_maker
               toCreate={
-                <a href="mailto:Sekarsakthi73@gmail.com">
-                  <FontAwesomeIcon icon={faEnvelope} /> Sekarsakthi73@gmail.com
+                <a href="/">
+                  <FontAwesomeIcon icon={faEnvelope} /><span className='glowing-txt'>Sekarsakthi73</span><span className='faulty-letter'>@gmail.com</span>
                 </a>
               }
               tag="p"
             ></Cont_maker>
             <Cont_maker
               toCreate={
-                <a href="https://www.linkedin.com/in/Sakthi73/" target="blank">
+                <a className='faulty-letter' href="https://www.linkedin.com/in/Sakthi73/" target="blank">
                   <FontAwesomeIcon icon={faLinkedin} /> LinkedIn/Sakthi73
                 </a>
               }
@@ -72,7 +73,7 @@ function App() {
             <Cont_maker
               toCreate={
                 <a href="https://wa.me/9080760890" target="blank">
-                  <FontAwesomeIcon icon={faMobile} /> 9080760890
+                  <FontAwesomeIcon icon={faPhone} /> 9080760890
                 </a>
               }
               tag="p"
@@ -105,14 +106,22 @@ function App() {
                 </ul>
               </nav>
             </div>
+            <CSSTransition
+              in={true}
+              timeout={800}
+              classNames="ComponentArena"
+              unmountOnExit
+            >
             <div className="ComponentArena">
               <Routes>
-                <Route path="/whoami" element={<WhoAmI />} />
+                <Route path="/port-folio" element={<Aboutpage />} />
                 <Route path="/languages" element={<Languages />} />
                 <Route path="/proj" element={<Project />} />
-                <Route path="/port-folio" element={<Aboutpage />} />
+                <Route path="/whoami" element={<WhoAmI />} />
               </Routes>
             </div>
+            </CSSTransition>
+
           </div>
         </div>
       </Router>

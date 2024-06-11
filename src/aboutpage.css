@@ -1,43 +1,38 @@
 .welcome-container {
-    text-align: center;
-    margin-top: 50px;
-    animation: fadeIn 2s ease-in;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .tech {
-    font-weight: bold;
-    display: inline-block;
+  to {
+    opacity: 1;
   }
-  
-  .fade-in {
-    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
   }
-  
-  .fade-out {
-    animation: fadeOut 1s forwards;
+  to {
+    opacity: 0;
   }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes fadeOut {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
-  }
-  
-  .welcome-container p{
-    color: #9c9da2  
-  }
-  .fadeClass {
-    color: #009acc;
-  }
+}
+
+.welcome-container p {
+  color: #9c9da2;
+}
+
+span {
+  color: #009acc;
+}

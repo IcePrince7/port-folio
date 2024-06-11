@@ -6,6 +6,7 @@
         margin: 2rem;
         color: 717e8e;
         cursor: default;
+        --glow-color: hsl(186 100% 69%);
         font-size: 18px;
 
     }
@@ -16,3 +17,7 @@
         justify-content: center;
  
     }
+.Contact:hover{
+    color: aqua;
+    background-color: red;
+}

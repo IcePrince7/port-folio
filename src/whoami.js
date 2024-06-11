@@ -1,32 +1,19 @@
 import React from "react";
-import "./whoami.css"
+import { faJava, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import "./whoami.css";
+
+function ico(params){
+  return(<></>);
+  // return <FontAwesomeIcon icon={params} />
+}
 
 function WhoAmI() {
-  const keywords = [
-    "Dedicated Software Engineer",
-    "Motivated ",
-    "Dynamic and influential career",
-    "Strong skill set",
-    "Self-motivated",
-    "Looking forward-thinking organization",
-        "Enthusiasm and knowledge",
-    "2+ years of experience",
-    "Thorough grasp of the full software lifecycle",
-
- 
-  ];
+   
 
   return (
-    <div className="whoAmIContainer">
-      <div style={{textAlign:"center" }}><h1>Myself</h1></div>
-      <ul className="keywordsList">
-        {keywords.map((keyword, index) => (
-          <li key={index} className="keywordItem">
-            {keyword}
-          </li>
-        ))}
-      </ul>
-    </div>
+     <h3 className="intro">Hi, I'm a software engineer with   2.5 years of experience, seeking opportunities to grow with a forward-thinking company. I'm passionate about building seamless, scalable web solutions and excited to contribute to meaningful projects</h3>
   );
 }
 

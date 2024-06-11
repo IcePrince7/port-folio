@@ -1,173 +1,351 @@
- 
- 
-  body {
-    background-color: #191924;
-    background:  #191924  ; 
-    border: 1px solid gold;
-    margin: .5% 1%;
-    border-radius: 10px;
-      }
+/* body {
+  background-color: #191924;
+  background: #191924;
+  border: 1px solid gold;
+  margin: .5% 1%;
+  border-radius: 10px;
+}
 
-  .mainClass {
-    position: fixed;
-    backdrop-filter: blur(90px);
-    width: 100%;
-    height: 100%;
-    
-  }
-.mainClassNarrow{
+.mainClass {
+  position: fixed;
+  backdrop-filter: blur(90px);
+  width: 100%;
+  height: 100%;
+
+} */
+
+.mainClassNarrow {
   margin-top: 10%;
 }
 
-  .NameContainer {
-    transition: all 0.5s;
-    animation: fadeIn 1s forwards;
-    display: flex;
-    font-size: 1%;
-    justify-content: center;
+.NameContainer {
+  transition: all 0.5s;
+  animation: fadeIn 1s forwards;
+  display: flex;
+  font-size: 1%;
+  justify-content: center;
 
+}
+
+.NameContainer h1 {
+  /* font-weight: bold; */
+  font-family: cursive;
+  color: #854ce6;
+  border-right: 2px solid lightcoral;
+  animation: blink 0.7s step-end infinite;
+  font-size: 1.5rem;
+}
+
+@keyframes blink {
+
+  from,
+  to {
+    border-color: transparent;
   }
 
-  .NameContainer h1 {
-    /* font-weight: bold; */
-    font-family: cursive;
-    color: #854ce6;
-    border-right: 2px solid lightcoral;
-    animation: blink 0.7s step-end infinite;
-    font-size: 1.5rem;
+  50% {
+    border-color: #854ce6;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
 
-  @keyframes blink {
+  to {
+    opacity: 1;
+  }
+}
 
-    from,
-    to {
-      border-color: transparent;
-    }
+.gridCont {
+  display: grid;
+  /* border: 1px solid #854ce6; */
+  gap: 10px;
+  text-align: center;
+  padding: 2px;
+  margin: 0 10%;
+  border-radius: 8%;
+  grid-template-columns: 1fr;
+  position: relative;
+  color: var(--glow-color);
+  cursor: pointer;
+  padding: 0.35em 1em;
+  border: 0.15em solid var(--glow-color);
+  border-radius: 0.45em;
+  background: none;
+  perspective: 2em;
+  font-family: "Raleway", sans-serif;
+  font-size: 2em;
+  font-weight: 900;
+ 
 
-    50% {
-      border-color: #854ce6;
-    }
+  -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  animation: border-flicker 2s linear infinite;
+}
+
+
+.gridCont a {
+  text-decoration: none;
+  color: white;
+    margin-right: -0.8em;
+  -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+  0 0 0.45em var(--glow-color);
+  -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+  0 0 0.45em var(--glow-color);
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+  animation: text-flicker 3s linear infinite;
   }
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
+  .gridCont a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.7;
+    filter: blur(1em);
+    transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+    background: var(--glow-color);
+    pointer-events: none;
+  }
+  .gridCont a::after {
+    content: "";
+    position: absolute;
+    
+    z-index: -1;
+    background-color: var(--glow-color);
+    box-shadow: 0 0 2em 0.2em var(--glow-color);
+    transition: opacity 100ms linear;
+  }
+ 
+  
+ 
+  .gridCont:hover:after {
+    filter: blur(1.5em);
+  opacity: 1;
+}
+  .gridCont:hover:before {
+    opacity: 1;
+  }
+  
+  /* @keyframes faulty-flicker {
+    0% {
+      opacity: 0.1;
     }
-
-    to {
+    2% {
+      opacity: 0.1;
+    }
+    4% {
+      opacity: 0.5;
+    }
+    19% {
+      opacity: 0.5;
+    }
+    21% {
+      opacity: 0.1;
+    }
+    23% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0.5;
+    }
+    83% {
+      opacity: 0.4;
+    }
+  
+    87% {
       opacity: 1;
     }
   }
-
-  .page {
-    filter: blur(7px);
-    pointer-events: none;
-    cursor: not-allowed;
+  
+  @keyframes text-flicker {
+    0% {
+      opacity: 0.1;
+    }
+  
+    2% {
+      opacity: 1;
+    }
+  
+    8% {
+      opacity: 0.1;
+    }
+  
+    9% {
+      opacity: 1;
+    }
+  
+    12% {
+      opacity: 0.1;
+    }
+    20% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0.3;
+    }
+    30% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: 0.7;
+    }
+    72% {
+      opacity: 0.2;
+    }
+  
+    77% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 0.9;
+    }
   }
+  
+  @keyframes border-flicker {
+    0% {
+      opacity: 0.1;
+    }
+    2% {
+      opacity: 1;
+    }
+    4% {
+      opacity: 0.1;
+    }
+  
+    8% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }}
+   */
+.faulty-letter {
+  opacity: 0.5;
+  animation: faulty-flicker 2s linear infinite;
+}
 
-  .TwoHalves {
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-  }
+.page {
+  filter: blur(7px);
+  pointer-events: none;
+  cursor: not-allowed;
+}
 
-  .NavBar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 8px;
-  }
+.TwoHalves {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  .NavBar ul {
-    display: flex;
-    font: bold 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-size: small;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
+.NavBar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
 
-  .NavBar ul li {
-    flex-shrink: 0;
-  }
+.NavBar ul {
+  display: flex;
+  font: bold 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: small;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 
+.NavBar ul li {
+  flex-shrink: 0;
+}
+
+.NavBar ul li a {
+  background: inherit;
+  border: 1px solid #854ce6;
+  text-align: center;
+  color: #854ce6;
+  padding: 12px 20px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+
+
+.NavBar li:first-child a {
+  border-radius: 10px 0 0 10px;
+}
+
+.NavBar li:last-child a {
+  border-radius: 0px 10px 10px 0px;
+}
+
+.NavBar ul li a:hover {
+
+  background-color: #29223f;
+}
+
+@media (max-width: 1200px) {
   .NavBar ul li a {
-    background: inherit;
-    border: 1px solid #854ce6;
-    text-align: center;
-    color: #854ce6;
-    padding: 12px 20px;
-    text-decoration: none;
-    white-space: nowrap;
+    font-size: 1.2vw;
+    padding: 10px 18px;
   }
+}
+
+@media (max-width: 800px) {
+  .NavBar ul li a {
+    font-size: 1.5vw;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .NavBar ul li a {
+    font-size: 2vw;
+    padding: 6px 14px;
+  }
+}
 
  
+.ComponentArena {
+  margin: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: small;
+  background: linear-gradient(#191924, #33193f);
+  position: relative;
+  transition: all 8s ease-in;
+}
 
-  .NavBar li:first-child a {
-    border-radius: 10px 0 0 10px;
-  }
+.ComponentArena-enter {
+  transform: translateY(100%);
+}
 
-  .NavBar li:last-child a {
-    border-radius: 0px 10px 10px 0px;
-  }
+.ComponentArena-enter-active {
+  transform: translateY(0);
+  transition: all 0.8s ease;
+}
 
-  .NavBar ul li a:hover {
- 
-    background-color: #29223f;
-  }
+.ComponentArena-exit {
+  transform: translateY(0);
+}
 
-  @media (max-width: 1200px) {
-    .NavBar ul li a {
-      font-size: 1.2vw;
-      padding: 10px 18px;
-    }
-  }
+.ComponentArena-exit-active {
+  transform: translateY(100%);
+  transition: all 0.8s ease;
+}
 
-  @media (max-width: 800px) {
-    .NavBar ul li a {
-      font-size: 1.5vw;
-      padding: 8px 16px;
-    }
-  }
-
-  @media (max-width: 500px) {
-    .NavBar ul li a {
-      font-size: 2vw;
-      padding: 6px 14px;
-    }
-  }
-  
-  h2 {
-    color: orange;
-  }
-  
- 
-
- 
-  .ComponentArena {
-    margin: 10px;
-    width: 100%;
-    padding: 10px;
-    font-size: small;
-    background: linear-gradient(#191924 ,#33193f)
-  }
-  .ComponentArena p {
-    padding: 15px 0;
-    color: #2e64d0;
-  }
- 
-  .gridCont {
-    display: grid;
-    border: 1px solid #854ce6;
-    gap: 10px;
-    text-align: center;
-    padding: 2px;
-    margin: 0 10%;
-    border-radius: 8%;
-    grid-template-columns: 1fr;
-  }
-  .gridCont a {
-    text-decoration: none;
-    color: white;
-  }
+.ComponentArena p {
+  padding: 15px 0;
+  color: #2e64d0;
+}

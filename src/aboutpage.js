@@ -9,9 +9,8 @@ export default function Aboutpage() {
   const [techIndex, setTechIndex] = useState(0);
 
   useEffect(() => {
-    const cycleTime = 3000; 
-    const fadeOutTime = 1000; 
- 
+    const cycleTime = 3500;  
+    const fadeOutTime = 1000;  
 
     const interval = setInterval(() => {
       setFadeClass("fade-out");
@@ -33,7 +32,7 @@ export default function Aboutpage() {
     <div className="welcome-container">
       <h1>Welcome to my portfolio!</h1>
       <br />
-      <p>This webpage is built using <span className= "fadeClass">{currentTech}</span></p>
+      <p>This webpage is built using <span className={fadeClass}><>{currentTech}</></span></p>
     </div>
   );
 }

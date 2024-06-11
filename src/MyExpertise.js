@@ -1,26 +1,41 @@
-import React, { useState, useEffect } from "react";
+import { faAngular, faCss3, faHtml5, faReact ,faPython,faNodeJs,faJava,faGithub,faJira,} from '@fortawesome/free-brands-svg-icons';
+import { faCode ,faLink} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useEffect, useState } from "react";
 import "./MyExpertise.css";
+
 
 const skillsData = [
   {
     title: "Frontend",
-    skills: ["JavaScript", "React", "Angular", "CSS", "HTML"],
+    skills: {
+    "JavaScript": faCode,
+    "React": faReact,
+    "Angular": faAngular,
+    "CSS": faCss3,
+    "HTML": faHtml5,
+    }
   },
   {
     title: "Backend",
-    skills: ["Java", "SpringBoot", "Python", "Node.js"],
+    skills: {
+   "Java": faJava,
+      "SpringBoot": faJava,
+      "Python": faPython,
+      "Node.js": faNodeJs,
+  }
   },
   {
     title: "Database",
-    skills: ["MySQL", "MongoDB", "H2"],
+    skills: {"MySQL":0, "MongoDB":0, "H2":0},
   },
   {
     title: "Testing",
-    skills: ["Selenium", "Junit", "Cucumber"],
+    skills: {"Selenium":0, "Junit":0, "Cucumber":0},
   },
   {
     title: "Tools",
-    skills: ["Git", "Jira", "Postman"],
+    skills: {"Git":faGithub, "Jira":faJira, "Postman":faLink},
   },
 ];
 
@@ -75,8 +90,10 @@ function MyExpertise() {
           >
             <h1>{section.title}</h1>
             <ul>
-              {section.skills.map((skill, skillIndex) => (
-                <p key={skillIndex}>{skill}</p>
+            {Object.keys(section.skills).map((skill, skillIndex) => (
+                <p key={skillIndex} style={{color:'#9c9da2'}}>
+                  {skill} <FontAwesomeIcon icon={section.skills[skill]} className="fontss" />
+                </p>
               ))}
             </ul>
           </div>
