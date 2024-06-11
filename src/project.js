@@ -8,7 +8,7 @@ function Project() {
     {
       project_name: "Carmania - A Car Reselling E-commerce Site",
       usecase: [
-        ` Carbonia boasts an extensive selection of cars, merchandise, and parts, providing users with a diverse array of options to explore and purchase.`,
+        `Carmania boasts an extensive selection of cars, merchandise, and parts, providing users with a diverse array of options to explore and purchase.`,
         `Powered by JavaScript, Node.js, Express.js, HTML, CSS, and MongoDB, Carbonia ensures a seamless shopping experience while also implementing robust CRUD operations, sophisticated authentication and authorization features, and REST APIs for enhanced functionality and security.`,
         `With its user-friendly interface, intuitive navigation, and efficient backend operations, Carbonia prioritizes delivering an immersive and satisfying experience for car enthusiasts, making browsing, shopping, and managing transactions effortless and enjoyable.`,
       ],
