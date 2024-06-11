@@ -117,6 +117,7 @@ function App() {
                 <Route path="/languages" element={<Languages />} />
                 <Route path="/proj" element={<Project />} />
                 <Route path="/whoami" element={<WhoAmI />} />
+                <Route path="/*" element={<WhoAmI />} />
               </Routes>
             </div>
             </CSSTransition>

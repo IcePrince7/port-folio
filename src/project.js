@@ -1,7 +1,19 @@
 import React, { useState, useEffect } from "react";
-import "./project.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import "./project.css";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 function Project() {
   const arr = [
+    {
+      project_name: "Carmania - A Car Reselling E-commerce Site",
+      usecase: [
+        ` Carbonia boasts an extensive selection of cars, merchandise, and parts, providing users with a diverse array of options to explore and purchase.`,
+        `Powered by JavaScript, Node.js, Express.js, HTML, CSS, and MongoDB, Carbonia ensures a seamless shopping experience while also implementing robust CRUD operations, sophisticated authentication and authorization features, and REST APIs for enhanced functionality and security.`,
+        `With its user-friendly interface, intuitive navigation, and efficient backend operations, Carbonia prioritizes delivering an immersive and satisfying experience for car enthusiasts, making browsing, shopping, and managing transactions effortless and enjoyable.`,
+      ],
+      link: [`https://iceprince7.github.io/Carmania/`],
+    },
     {
       project_name: "E-notes - An Online notes Management Tool",
       usecase: [
@@ -9,7 +21,7 @@ function Project() {
         `Created and maintained a web page for individuals to write, store, and retrieve notes or links securely.`,
         `Implemented user authentication and authorization mechanisms to ensure data privacy`,
       ],
-      link:[`https://github.com/IcePrince7/enotes`]
+      link: [`https://iceprince7.github.io/enotes/`],
     },
     {
       project_name: "IBook - Library Management Tool",
@@ -18,7 +30,9 @@ function Project() {
         `Designed and developed a web page for students to access library books, including Admin functionality.`,
         `Implemented services to enhance functionality and ensure seamless user experience.`,
       ],
-      link:[`https://github.com/IcePrince7/IBook-An-Online-Library-Management-Tool/`]
+      link: [
+        `https://iceprince7.github.io/IBook-An-Online-Library-Management-Tool/`,
+      ],
     },
   ];
 
@@ -53,8 +67,13 @@ function Project() {
               display: index === currentIndex ? "block" : "none",
             }}
           >
-            <div className="Title"  >
-              <a href={item.link} target="blank" ><h2>{item.project_name}</h2></a>
+            <div className="Title">
+              <a href={item.link} target="blank">
+                <h2>
+                  {item.project_name}{" "}
+                  <FontAwesomeIcon icon={faLink}></FontAwesomeIcon>
+                </h2>
+              </a>
             </div>
             <p className="usecase">
               {item.usecase.map((subItem, subIndex) => (
