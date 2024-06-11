@@ -57,14 +57,13 @@ function App() {
             <Cont_maker
               toCreate={
                 <a href="/">
-                  <FontAwesomeIcon icon={faEnvelope} /><span className='glowing-txt'>Sekarsakthi73</span><span className='faulty-letter'>@gmail.com</span>
-                </a>
+                  <FontAwesomeIcon icon={faEnvelope} />Sekarsakthi73@gmail.com</a>
               }
               tag="p"
             ></Cont_maker>
             <Cont_maker
               toCreate={
-                <a className='faulty-letter' href="https://www.linkedin.com/in/Sakthi73/" target="blank">
+                <a  href="https://www.linkedin.com/in/Sakthi73/" target="blank">
                   <FontAwesomeIcon icon={faLinkedin} /> LinkedIn/Sakthi73
                 </a>
               }
