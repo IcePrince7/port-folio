@@ -31,7 +31,7 @@ const skillsData = [
   },
   {
     title: "Testing",
-    skills: {"Selenium":0, "Junit":0, "Cucumber":0},
+    skills: {"Jasmine":0,"Karma":0,"Selenium":0, "Junit":0,   },
   },
   {
     title: "Tools",
