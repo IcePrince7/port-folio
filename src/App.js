@@ -1,17 +1,20 @@
 import { faJava, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faCode, faContactBook, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { CSSTransition } from 'react-transition-group';
-import "./App.css";
+ import "./App.css";
 import Cont_maker from "./Contmaker";
 import Languages from "./MyExpertise";
 import Aboutpage from "./aboutpage";
 import Profile from "./prof";
 import Project from "./project";
 import WhoAmI from "./whoami";
+import Footer from './footer';
+ 
 
+
+ 
 const texts = ["akthivel G", "oftware Engineer"];
 
 function App() {
@@ -20,6 +23,11 @@ function App() {
   const [techIndex, setTechIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+  const aboutRef = useRef(null)
+  const whoamiRef = useRef(null)
+  const projectRef = useRef(null)
+  const languagesRef = useRef(null)
+ 
 
   useEffect(() => {
     const typingSpeed = 150;
@@ -45,9 +53,15 @@ function App() {
     return () => clearTimeout(timeout);
   }, [charIndex, isDeleting, techIndex]);
 
+  const handleClick =  (ref) => {
+    if (ref.current) {
+      ref.current.scrollIntoView( );
+    }
+  };
+
   return (
     <div className={enlargeapp ? "mainClass" : "mainClassNarrow"}>
-      <Router>
+      
         <Profile params={setEnlargeapp}></Profile>
         <div className={enlargeapp ? "page" : ""}>
           <div className="NameContainer">
@@ -57,7 +71,7 @@ function App() {
             <Cont_maker
               toCreate={
                 <a href="/">
-                  <FontAwesomeIcon icon={faEnvelope} />Sekarsakthi73@gmail.com</a>
+                  <FontAwesomeIcon icon={faEnvelope} /> Sekarsakthi73@gmail.com</a>
               }
               tag="p"
             ></Cont_maker>
@@ -79,53 +93,35 @@ function App() {
             ></Cont_maker>
           </div>
           <div className="TwoHalves">
-            <div className="NavBar">
+          <div className="NavBar">  
               <nav>
                 <ul>
                   <li>
-                    <Link to="/whoami" activeClassName="active">
-                      My self
-                    </Link>
+                    <button  className="btn btn-outline-secondary" onClick={()=>handleClick(whoamiRef)}>Myself</button>
                   </li>
                   <li>
-                    <Link to="/languages" activeClassName="active">
-                      My Expertise
-                    </Link>
+                  <button  className="btn btn-outline-secondary" onClick={()=>handleClick(languagesRef)}>My Expertise</button>
                   </li>
                   <li>
-                    <Link to="/proj" activeClassName="active">
-                      Projects
-                    </Link>
+                  <button  className="btn btn-outline-secondary" onClick={()=>handleClick(projectRef)}>My Projects</button>
                   </li>
                   <li>
-                    <Link to="/port-folio" activeClassName="active">
-                      About
-                    </Link>
+                  <button  className="btn btn-outline-secondary" onClick={()=>handleClick(aboutRef)}>About</button>
                   </li>
                 </ul>
-              </nav>
-            </div>
-            <CSSTransition
-              in={true}
-              timeout={800}
-              classNames="ComponentArena"
-              unmountOnExit
-            >
+              </nav></div>
             <div className="ComponentArena">
-              <Routes>
-                <Route path="/port-folio" element={<Aboutpage />} />
-                <Route path="/languages" element={<Languages />} />
-                <Route path="/proj" element={<Project />} />
-                <Route path="/whoami" element={<WhoAmI />} />
-                <Route path="/*" element={<WhoAmI />} />
-              </Routes>
+            < WhoAmI  ref={whoamiRef}></WhoAmI>
+            <Languages ref={languagesRef}></Languages>
+            <Project ref={projectRef}></Project>
+            <Aboutpage ref={aboutRef}></Aboutpage>  
+              
             </div>
-            </CSSTransition>
-
-          </div>
+              </div>
         </div>
-      </Router>
-    </div>
+        <Footer></Footer>
+      </div>
+
   );
 }
 

@@ -1,6 +1,10 @@
 .welcome-container {
   text-align: center;
   margin-top: 50px;
+  padding-bottom: 50px;
+  background: linear-gradient(#191924, #33193f);
+  padding-top: 50px;
+
 }
 
 .fade-in {

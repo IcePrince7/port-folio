@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./project.css";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
-function Project() {
+const Project = forwardRef((props,ref) => {
   const arr = [
     {
       project_name: "Carmania - A Car Reselling E-commerce Site",
@@ -58,7 +58,7 @@ function Project() {
   };
 
   return (
-    <>
+    <div className ="projectContainer" ref={ref}>
       <ul>
         {arr.map((item, index) => (
           <div
@@ -100,8 +100,8 @@ function Project() {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }
-
+)
 export default Project;

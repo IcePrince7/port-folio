@@ -5,7 +5,7 @@ function Cont_maker({tag,toCreate}) {
   const Elem = tag
   return (
     <>
-        <Elem ClassName ="Contact">{toCreate}</Elem>
+        <Elem className ="Contact">{toCreate}</Elem>
     </>
   );
 }

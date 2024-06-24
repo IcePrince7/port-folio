@@ -1,45 +1,44 @@
 import { faAngular, faCss3, faHtml5, faReact ,faPython,faNodeJs,faJava,faGithub,faJira,} from '@fortawesome/free-brands-svg-icons';
-import { faCode ,faLink} from '@fortawesome/free-solid-svg-icons';
+import { faCode ,faLink, faN} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect, useState } from "react";
+import React, { forwardRef, useEffect, useState } from "react";
 import "./MyExpertise.css";
-
 
 const skillsData = [
   {
     title: "Frontend",
     skills: {
-    "JavaScript": faCode,
-    "React": faReact,
-    "Angular": faAngular,
-    "CSS": faCss3,
-    "HTML": faHtml5,
+      "JavaScript": faCode,
+      "React": faReact,
+      "Angular": faAngular,
+      "CSS": faCss3,
+      "HTML": faHtml5,
     }
   },
   {
     title: "Backend",
     skills: {
-   "Java": faJava,
+      "Java": faJava,
       "SpringBoot": faJava,
       "Python": faPython,
       "Node.js": faNodeJs,
-  }
+    }
   },
   {
     title: "Database",
-    skills: {"MySQL":0, "MongoDB":0, "H2":0},
+    skills: {"MySQL": faN, "MongoDB": faN, "H2": faN},
   },
   {
     title: "Testing",
-    skills: {"Jasmine":0,"Karma":0,"Selenium":0, "Junit":0,   },
+    skills: {"Jasmine": faN, "Karma": faN, "Selenium": faN, "Junit": faN},
   },
   {
     title: "Tools",
-    skills: {"Git":faGithub, "Jira":faJira, "Postman":faLink},
+    skills: {"Git": faGithub, "Jira": faJira, "Postman": faLink},
   },
 ];
 
-function MyExpertise() {
+const MyExpertise = forwardRef((probs, ref) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [intervalId, setIntervalId] = useState(null);
 
@@ -81,7 +80,7 @@ function MyExpertise() {
 
   return (
     <>
-      <div className="expertiseContainer">
+      <div ref={ref} className="expertiseContainer">
         {skillsData.map((section, index) => (
           <div
             key={index}
@@ -90,9 +89,9 @@ function MyExpertise() {
           >
             <h1>{section.title}</h1>
             <ul>
-            {Object.keys(section.skills).map((skill, skillIndex) => (
+              {Object.keys(section.skills).map((skill, skillIndex) => (
                 <p key={skillIndex} style={{color:'#9c9da2'}}>
-                  {skill} <FontAwesomeIcon icon={section.skills[skill]} className="fontss" />
+                  {skill} {section.skills[skill] !== faN ? <FontAwesomeIcon icon={section.skills[skill]} className="fontss" /> : null}
                 </p>
               ))}
             </ul>
@@ -100,32 +99,32 @@ function MyExpertise() {
         ))}
         <div className="buttonContainer">
           <button className="prevButton" onClick={handlePrevClick}>
-          ❮
+            ❮
           </button>
           <button className="nextButton" onClick={handleNextClick}>
-          ❯
+            ❯
           </button>
         </div>
-      </div>
-      <div style={{ textAlign: "center", marginBottom: "30px" }}>
-        {skillsData.map((_, index) => (
-          <span
-            key={index}
-            style={{
-              width: "10px",
-              height: "10px",
-              backgroundColor: currentSlide === index ? "blue" : "gray",
-              borderRadius: "50%",
-              display: "inline-block",
-              margin: "0 5px",
-              cursor: "pointer",
-            }}
-            onClick={() => handleDotClick(index)}
-          />
-        ))}
+        <div style={{ textAlign: "center", marginBottom: "30px" }}>
+          {skillsData.map((_, index) => (
+            <span
+              key={index}
+              style={{
+                width: "10px",
+                height: "10px",
+                backgroundColor: currentSlide === index ? "blue" : "gray",
+                borderRadius: "50%",
+                display: "inline-block",
+                margin: "0 5px",
+                cursor: "pointer",
+              }}
+              onClick={() => handleDotClick(index)}
+            />
+          ))}
+        </div>
       </div>
     </>
   );
-}
+});
 
 export default MyExpertise;

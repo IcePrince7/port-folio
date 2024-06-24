@@ -5,37 +5,29 @@
   border-radius: 100px;
   cursor: pointer;
   transition: width 1.62s ease-out, height 1.62s ease-out;
-  animation: anim 15s ease-out infinite;
+  animation: anim 8s ease-out infinite;
+  
 }
 
 @keyframes anim {
   0% {
-     box-shadow: 0 -2vmin 4vmin, 0 1vmin 4vmin  ,
-      0 -2vmin 7vmin ;
-  }
+       }
  
   10% {
     border-radius: 100%;
-    box-shadow: 0 4vmin 16vmin hotpink inset, 0 2vmin 5vmin, 0 4vmin 4vmin Medium,
-      0 6vmin 8vmin ;
-  }
+    }
   40% {
     border-radius: 50% 50% 53% 47% / 72% 69% 31% 28%;
   }
   70% {
     border-radius: 50% 50% 53% 47% / 26% 22% 78% 74%;
-    box-shadow: 1vmin 1vmin 8vmin,
-      2vmin -1vmin 4vmin Medium, -1vmin -1vmin 16vmin ;
-  }
+   }
   80% {
     border-radius: 50% 50% 53% 47% / 26% 69% 31% 74%;
   }
   
   100% {
-    
-    box-shadow: 0 -2vmin 4vmin, 0 1vmin 4vmin Medium,
-      0 -2vmin 7vmin ;
-  }
+    }
 }
 .profile {
     display: flex;

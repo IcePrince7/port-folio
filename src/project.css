@@ -15,3 +15,10 @@
 .usecase li {
     color: #9c9da2;
 }
+
+.projectContainer{
+    background: linear-gradient(#191924, #33193f);
+    padding-bottom: .3%;
+    padding-top: 50px;
+
+}

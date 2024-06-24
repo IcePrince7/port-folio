@@ -1,6 +1,10 @@
+
 .expertiseContainer {
   position: relative;
+  background: linear-gradient(#191924, #33193f);
   width: 100%;
+  padding-top: 50px;
+
   overflow: hidden;
 }
 

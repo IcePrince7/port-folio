@@ -1,6 +1,7 @@
-.intro{
+.intro {
   color: #9c9da2;
-  margin-left: 16%;
-  margin-right: 16%;
-  align-items: center;
+ 
+  background: linear-gradient(#191924, #33193f);
+  padding: 60px 2% 30px 12px;
+
 }

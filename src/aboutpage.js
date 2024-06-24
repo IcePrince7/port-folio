@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import "./aboutpage.css";
 
-const technologies = ["React", "HTML", "CSS", "JavaScript"];
 
-export default function Aboutpage() {
+const technologies = ["React", "HTML", "CSS", "JavaScript"];
+const Aboutpage = forwardRef((props, ref) =>{
   const [currentTech, setCurrentTech] = useState(technologies[0]);
   const [fadeClass, setFadeClass] = useState("fade-in");
   const [techIndex, setTechIndex] = useState(0);
@@ -29,10 +29,16 @@ export default function Aboutpage() {
   }, [techIndex]);
 
   return (
-    <div className="welcome-container">
+    <div ref={ref} className="welcome-container">
       <h1>Welcome to my portfolio!</h1>
       <br />
       <p>This webpage is built using <span className={fadeClass}><>{currentTech}</></span></p>
     </div>
   );
 }
+
+)
+
+
+
+export default Aboutpage;
