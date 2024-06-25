@@ -50,12 +50,15 @@ border: 1px solid rgba(255, 255, 255, 0.95);
   transition: color 0.3s ease;
 }
 
-.social-icons a:hover {
+.social-icons .redicon {
   color: #ff0000; /* Change to your desired hover color */
 }
 
-.social-icons .blueicon:hover {
+.social-icons .blueicon{
   color: #0476e6; /* Additional hover effect for specific icons */
+}
+.social-icons .instaaa{
+  color: #fe005c; /* Additional hover effect for specific icons */
 }
 .social-icons {
   margin-top: 1rem; /* Adjust margin for spacing */

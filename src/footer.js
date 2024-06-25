@@ -17,9 +17,12 @@ const Footer = () => {
               <a className="blueicon" href="#">
                 <FontAwesomeIcon icon={faTwitter} size="2x" />
               </a>
-              <a href="#">
+              <a href="#" className='redicon'>
                 <FontAwesomeIcon icon={faYoutube} size="2x" />
-              </a>
+                </a>
+              <a className="instaaa">
+                <FontAwesomeIcon icon={faInstagram} size="2x" />
+                </a>
             </div>
           </div>
           <div className="footer-section">

@@ -14,7 +14,7 @@ const WhoAmI = forwardRef((props,ref) =>{
   return (
     <div ref={ref} > 
 
-     <h3  className="intro">Hi, I'm a software engineer with   2.5 years of experience, seeking opportunities to grow with a forward-thinking company. I'm passionate about building seamless, scalable web solutions and excited to contribute to meaningful projects
+     <h3  className="intro">Hi, I'm a Software Engineer with   2.5 years of experience, seeking opportunities to grow with a forward-thinking company. I'm passionate about building seamless, scalable web solutions and excited to contribute to meaningful projects
      
     </h3>
 
