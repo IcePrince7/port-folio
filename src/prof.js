@@ -27,8 +27,8 @@ function Profile({params}) {
     <div className= {!enlarged ? "profile": "after enprof"} >
       <img
         className={enlarged ? "Myprof enlarged" : "Myprof"}
-        src="myPhoto.png"
-        alt="Profile photo" onClick={toggleEnlarged}
+        src="neww.jpeg"
+        alt="" onClick={toggleEnlarged}
       />
     </div>
   );
