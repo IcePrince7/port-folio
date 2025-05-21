@@ -29,15 +29,15 @@ const Footer = () => {
             <h3>Quick Links</h3>
             <ul>
               <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">About me</a></li>
+              <li><a href="#">My Skills</a></li>
+              <li><a href="#">Contact me</a></li>
             </ul>
           </div>
           <div className="footer-section">
             <h3>Contact Me</h3>
             <div className="contact-details">
-              <p>ITPL, White Field Main Road, Bangalore</p>
+              <p>Balaji PG, Prasanth Layout, White Field Main Road, Bangalore 560066</p>
               <p>Email: Sekarsakthi73@gmail.com</p>
               <p>Phone: +91 9080760890</p>
             </div>
