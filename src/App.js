@@ -66,6 +66,7 @@ function App() {
       <StarBackground/>
       <Profile params={setEnlargeapp}></Profile>
       <div className={enlargeapp ? "page" : ""}>
+      
         <div className="NameContainer">
           <Cont_maker toCreate={`S${toDisplay}`} tag="h1"></Cont_maker>
         </div>
